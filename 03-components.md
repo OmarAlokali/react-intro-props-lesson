@@ -23,6 +23,38 @@ With components, there is more integration and less separation of HTML, CSS, and
 When using React, building components will be your main front-end task.
 - Because they're so encapsulated, components make it easy to reuse your code, test, and separate concerns.
 
+### [F.I.R.S.T. Components](https://addyosmani.com/first/)
+
+A React component is built to expect an input and render a UI with it. More importantly, a well-structured component only receives data specific to its purpose.
+
+This is because React follows a more **functional** approach to programming. For React components under this approach, **the same input will always produce the same output**.
+
+Best practice is that React components follow the **F.I.R.S.T.** guidelines
+
+#### Focused
+
+Components should do one thing and do it well.
+
+#### Independent
+
+Components should increase cohesion and reduce coupling. Behavior in one component should not impact the behavior of another. In other words, components should not rely on one another.
+
+> But they should compliment one another.
+
+#### Reusable
+
+Components should be written in a way that reduces the duplication of code.
+
+#### Small
+
+Ideally, components should be short and condensed.
+
+#### Testable
+
+Because the same input will always produce the same output, components are easily unit testable.
+
+> If you're interested, [Jest](https://facebook.github.io/jest/docs/tutorial-react.html) is a popular testing library for React.
+
 ### Identifying Components
 
 Take a look at [CraigsList](https://boston.craigslist.org/search/aap) (note: right click to open in a new tab!).
@@ -33,9 +65,13 @@ Each listing is a component. How can you identify this?
 - Listings look identical in structure, but have different information populating them
 - Listings are dynamically generated based on the user's search
 
-Now, go to [Amtrak.com](https://www.amtrak.com/home) (note: right click to open in a new tab!). We want to look at the listing page, so put in any "From" (for example, New York - Penn Station), any "To" (for example, Boston - South Station), and pick any date. Hit "Find Trains". Now look at the listing page:
+<!--- Now, go to [Amtrak.com](https://www.amtrak.com/home) (note: right click to open in a new tab!). We want to look at the listing page, so put in any "From" (for example, New York - Penn Station), any "To" (for example, Boston - South Station), and pick any date. Hit "Find Trains". Now look at the listing page:
 
-![Amtrak](images/amtrak.png)
+![Amtrak](images/amtrak.png) --->
+
+Now, check out this website, Tube Tracker.
+
+![tube tracker](https://i.imgur.com/59nCojL.png)
 
 Scrolling down it, identify the visual "components" the website is comprised of. We suggest drawing this out on paper! So something like this...
 
@@ -49,6 +85,7 @@ As you're drawing this out, think about the following questions...
 
 
 ### So -
+
 What does a component look like? Let's start with a simple "Hello World" example...
 
 #### Code along: A Very Basic Component
