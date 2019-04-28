@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Show from './Show';
 
-function App() {
+function App(props) {
+  console.log(props)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello Misk!</h1>
+      <p>Hello, my name is {props.marc.firstName} and my last name is {props.marc.lastName}</p>
+      
+        {props.marc.favoriteShows.map((show, index) => {
+            return <Show show={show} key={index}/>
+          })
+        }
+
     </div>
   );
 }
